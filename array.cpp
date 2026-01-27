@@ -4,7 +4,7 @@
 int array(int array[], int size) {
   int arrayreturn = 0;
 
-  for(int i = 0; i <= 4; i++){
+  for(int i = 0; i < SIZE; i++){
     std::cout << "Enter number:\n";
     std::cin >> array[i];
     arrayreturn += array[i];   
