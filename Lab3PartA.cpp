@@ -8,7 +8,7 @@ int main(){
 
 int row = 6;
 int col = 6;
-int array_name[6][6l];
+int array_name[6][6];
 
 darray(array_name, row , col);
 
