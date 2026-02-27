@@ -18,9 +18,19 @@ cstr[charpos - 1] = tolower(cstr[charpos - 1]);
 }
 
 }
-
-
 return 0;
+}
+int capitalize(char cstr[], int size){
+
+int strlength = strlen(cstr);
+if(strlength < 4){
+  return 1;
+} 
+else{
+cstr[2] = toupper(cstr[2]);
+cstr[3] = toupper(cstr[3]);
+return 0;
+}
 
 }
 
@@ -28,6 +38,8 @@ return 0;
 int main(){
 // for C style strings 
 char string[100];
+int cap = 100;
+char string2[cap];
 // can hold 99 characters plus null
 int position = 0;
 std::cout << "Please enter a string:\n";
@@ -35,17 +47,16 @@ std::cout << "Please enter a string:\n";
 std::cin.getline(string, 100);
 std::cout << "Please enter a position to toggle:\n";
 std::cin >> position;
+std::cin.ignore(); // gets rid of \n in buffer 
 toggle(string, position);
 std::cout << "Toggled string...\n";
-std::cout << string << std::endl;
+std::cout << string << "\n";
+std::cout << "----------------------------------------\n";
+std::cout << "Please enter a string to capitalize 3rd and 4th letter:\n";
+std::cin.getline(string2, cap);
+capitalize(string2, cap);
+std::cout << "Capitalized string...\n";
+std::cout << string2 << "\n";
 
-
-
-
-
-
-
-
-
-  return 0;
+return 0;
 }
