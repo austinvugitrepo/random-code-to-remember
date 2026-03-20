@@ -6,9 +6,16 @@
 using namespace std;
 
 // Fill in code to declare a structure named Dimensions that contains TWO float members, length and width
-
+struct Dimensions{
+float length = 0;
+float width = 0;
+};
 // Fill in code to declare a structure named Rectangle that contains THREE members, area, perimeter, and sizes. area and perimeter should be floats, whereas sizes should be a dimensions structure variable
-
+struct Rectangle{
+float area = 0;
+float perimeter = 0;
+Dimensions sizes;
+};
 
 //Function Prototypes
 float calculateArea (Rectangle); //This function accepts Rectangle structure as argument and returns area of the rectangle.
@@ -17,32 +24,29 @@ float calculatePerimeter(Rectangle); //This function accepts Rectangle structure
 int main()
 {
 	// Fill in code to define a rectangle structure variable named box.
-
-	
-  cout << "Enter the length of a rectangle: ";
-
+        Rectangle box;	
+        cout << "Enter the length of a rectangle: ";        
 	// Fill in code to read in the length to the appropriate location
-
+        cin >> box.sizes.length;
 	cout << "Enter the width of a rectangle: ";
 
 	// Fill in code to read in the width to the appropriate location
-
+        cin >> box.sizes.width;
 	cout << endl << endl;
 
 	// Fill in code to compute the area and store it in the appropriate location. 
   //Hint: Call appropriate function here
-
+        box.area =  calculateArea(box);
 	// Fill in code to compute the perimeter and store it in the appropriate location
   //Hint: Call appropriate function here
-
+        box.perimeter = calculatePerimeter(box);
 	cout << fixed << showpoint << setprecision(2);
 
   //Fill in the code below between operators "<<  <<"" to display the area of the rectangle
-	cout << "The area of the rectangle is " <<     << endl;
+	cout << "The area of the rectangle is " << box.area << endl;
 
  //Fill in the code below between operators "<<  <<"" to display the perimeter of the rectangle 
-	cout << "The perimeter of the rectangle is " << 
-		 << endl;
+	cout << "The perimeter of the rectangle is " << box.perimeter << endl;
 
 	return 0;
 }
@@ -57,7 +61,9 @@ int main()
 //
 //**********************************************************
 
-
+float calculateArea(Rectangle mybox){
+return mybox.sizes.length * mybox.sizes.width;
+}
 
 //**********************************************************
 //                        calculatePerimeter
@@ -69,3 +75,6 @@ int main()
 //
 //**********************************************************
 
+float calculatePerimeter(Rectangle mybox){
+return (2 * mybox.sizes.length) + (2 * mybox.sizes.width);
+}
