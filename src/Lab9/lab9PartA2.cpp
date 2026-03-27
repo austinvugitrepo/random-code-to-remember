@@ -16,7 +16,10 @@ std::getline(std::cin, mName);
 std::cout << "What is your last name?: ";
 std::getline(std::cin, lName);
 
-std::cout << "Your first name is " << fName << std::endl;
+fullName = lName; // copy last name to full name
+fullName = fullName + ", " + fName + " " + mName; // adding strings like intergers
+
+std::cout << "Your full name is: " << fullName << std::endl;
 
 return 0;
 }

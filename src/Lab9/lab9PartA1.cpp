@@ -29,7 +29,7 @@ strcat(nameArranger, firstName);
 strcat(nameArranger, " ");
 strcat(nameArranger, middleName);
 
-printf("Your last name is: %s", nameArranger); // %s is for string
+printf("Your full name is: %s", nameArranger); // %s is for string
 printf("\n");
 return 0;
 }
