@@ -20,13 +20,16 @@ fgets(middleName, sizeof(middleName), stdin);
 
 printf("What is your last name?: ");
 fgets(lastName, sizeof(lastName), stdin);
-firstName[strcspn(lastName, "\n")] = '\0';
+lastName[strcspn(lastName, "\n")] = '\0';
 
 strcpy(nameArranger, lastName); //copy lastname into nameArranger 
 strcat(nameArranger, ","); // append "," to the last name
-printf("Your last name is: %s", nameArranger);
+strcat(nameArranger, " ");
+strcat(nameArranger, firstName);
+strcat(nameArranger, " ");
+strcat(nameArranger, middleName);
+
+printf("Your last name is: %s", nameArranger); // %s is for string
 printf("\n");
-
-
 return 0;
 }
