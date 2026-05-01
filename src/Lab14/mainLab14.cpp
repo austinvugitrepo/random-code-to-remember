@@ -1,7 +1,6 @@
 #include <iostream>
 #include <iomanip>
 #include "ProductionWorker.h"
-using namespace std;
 
 // Function prototype
 void displayInfo(ProductionWorker);
@@ -9,7 +8,18 @@ void displayInfo(ProductionWorker);
 int main()
 {
 	//Fill in the missing code
+	std::string name = "John Jones";
+	int num = 123;
+	std::string date = "10/12/2016";
+	int shift = 2;
+	double hrrate = 20.00;
+  
+	ProductionWorker emp(name, num, date, shift, hrrate);
+
+	displayInfo(emp);
+
 	return 0;
+
 }
 
 //******************************************************
@@ -18,17 +28,24 @@ int main()
 //******************************************************
 void displayInfo(ProductionWorker e)
 {
-	cout << setprecision(2) << fixed << showpoint;
-	cout << "Name: " 
-		 << e.getName() << endl;
-	cout << "Employee number: " 
-		 << e.getNumber() << endl;
-	cout << "Hire date: " 
-		 << e.getHireDate() << endl;
-	cout << "Shift: " 
-		 << e.getShiftName() << endl;
-	cout << "Shift number: " 
-		 << e.getShiftNumber() << endl;
-	cout << "Pay rate: " 
-		 << e.getPayRate() << endl;
+	std::cout << std::setprecision(2)
+		 << std::fixed << std::showpoint;
+
+	std::cout << "Name: " 
+		 << e.getName() << std::endl;
+
+	std::cout << "Employee number: " 
+		 << e.getNumber() << std::endl;
+
+	std::cout << "Hire date: " 
+		 << e.getHireDate() << std::endl;
+
+	std::cout << "Shift: " 
+		 << e.getShiftName() << std::endl;
+
+	std::cout << "Shift number: " 
+		 << e.getShiftNumber() << std::endl;
+
+	std::cout << "Pay rate: " 
+		 << e.getPayRate() << std::endl;
 }
