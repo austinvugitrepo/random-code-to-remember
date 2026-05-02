@@ -15,15 +15,18 @@ class Employee {
 			hireDate = date;				
 		}
 
-		std::string getName() {
+		std::string
+		getName() {
 			return employeeName;
 		}
 
-		int getNumber() {
+		int
+		getNumber() {
 			return employeeNumber;
 		}
-
-		std::string getHireDate() {
+		
+		std::string
+		getHireDate() {
 			return hireDate;
 		}
 

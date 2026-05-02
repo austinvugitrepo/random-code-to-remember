@@ -1,9 +1,10 @@
 #include <iostream>
 #include <iomanip>
 #include "ProductionWorker.h"
+#include "ShiftSupervisor.h"
 
 // Function prototype
-void displayInfo(ProductionWorker);
+void displayInfo(ProductionWorker, ShiftSupervisor);
 
 int main()
 {
@@ -14,9 +15,15 @@ int main()
 	int shift = 2;
 	double hrrate = 20.00;
   
-	ProductionWorker emp(name, num, date, shift, hrrate);
+	std::string sname = "Anna Queen";
+	int snum = 001;
+	std::string sdate = "1/1/2000";
+	double sal = 50000.00;
+	double bon = 2500.00;
 
-	displayInfo(emp);
+	ProductionWorker emp(name, num, date, shift, hrrate);
+	ShiftSupervisor sup(sname, snum, sdate, sal, bon);
+	displayInfo(emp, sup);
 
 	return 0;
 
@@ -26,11 +33,28 @@ int main()
 // The displayInfo function displays a production      *
 // worker's employment information.                    *
 //******************************************************
-void displayInfo(ProductionWorker e)
+void displayInfo(ProductionWorker e, ShiftSupervisor s)
 {
 	std::cout << std::setprecision(2)
 		 << std::fixed << std::showpoint;
 
+	std::cout << "Name: " 
+		 << s.getName() << std::endl;
+
+	std::cout << "Employee number: " 
+		 << s.getNumber() << std::endl;
+
+	std::cout << "Hire date: " 
+		 << s.getHireDate() << std::endl;
+
+	std::cout << "Annual Salary: " 
+		 << s.getYearlySalary() << std::endl;
+
+	std::cout << "Annual Bonus: " 
+		 << s.getYearlyBonus() << std::endl;
+
+	std::cout << std::endl;
+	
 	std::cout << "Name: " 
 		 << e.getName() << std::endl;
 
