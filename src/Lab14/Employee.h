@@ -27,4 +27,5 @@ class Employee {
 			return hireDate;
 		}
 
+};
 #endif
