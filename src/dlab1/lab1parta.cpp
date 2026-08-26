@@ -35,6 +35,10 @@ main()
 {
 	secretType p;
 	secretType p2("Miguel", 22, 160, 5.8);
+	secretType p3;
+	std::string n;
+	int a, w;
+	double h;
 
 	std::cout << "Default:\n";
 	p.print();
@@ -42,6 +46,22 @@ main()
 	std::cout << "Set Parameters:\n";
 	p2.print();
 
+	std::cout << "\n\n";
+	std::cout << "Enter name:\n";
+	std::getline(std::cin, n);
+	std::cout << "Enter age:\n";
+	std::cin >> a;
+	std::cout << "Enter weight:\n";
+	std::cin >> w;
+	std::cout << "Enter height:\n";
+	std::cin >> h;
+
+	std::cout << "User Parameters:\n";
+	p3.setName(n);
+	p3.setAge(a);
+	p3.setWeight(w);
+	p3.setHeight(h);
+	p3.print();
 
 	return 0;
 
