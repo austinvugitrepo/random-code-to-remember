@@ -26,18 +26,34 @@ class secretType {
 		double
 		getHeight();
 		secretType();
-		secretType(std::string, int, int, double,);
+		secretType(std::string, int, int, double);
 
 };
 
+int 
+main()
+{
+	secretType p;
+	secretType p2("Miguel", 22, 160, 5.8);
+
+	std::cout << "Default:\n";
+	p.print();
+	std::cout << "\n\n";
+	std::cout << "Set Parameters:\n";
+	p2.print();
+
+
+	return 0;
+
+}
 
 void
 secretType :: print()
 {
-	std::cout << "Name: " << getName() << endl;
-	std::cout << "Age: " << getAge() << " yrs\n";
+	std::cout << "Name: " << getName() << std::endl;
+	std::cout << "Age: " << getAge() << "yrs\n";
 	std::cout << "Weight: " << getWeight() << "lbs\n";
-	std::cout << "Height" << getHeight() << "ft\n";
+	std::cout << "Height: " << getHeight() << "ft\n";
 
 }
 
