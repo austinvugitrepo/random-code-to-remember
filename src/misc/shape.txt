@@ -1,0 +1,27 @@
+class Shape {
+
+	private:
+		double area;
+	public:
+		virtual void calcArea() {
+		}
+
+		double getArea() {
+			return area;
+		}
+
+};
+
+
+class Rectangle : public Shape {
+
+	private:
+		double length, width;
+	public:
+		Rectangle(double l, double w) {
+			length = l;
+			width = w;
+		}
+		void calcArea() {
+			area = length * height;
+		} 
