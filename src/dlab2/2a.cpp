@@ -49,8 +49,6 @@ Animal :: print()
 {
 	std::cout << "My name is " << getName() << std::endl;
 	std::cout << "I have " << getNumLegs() << " legs.\n"; 
-	std::cout << speak();
-	std::cout << move();
 }
 
 Animal :: Animal()
