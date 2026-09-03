@@ -30,6 +30,8 @@ class Animal {
 class Cat : public Animal {
 
 	public:
+		void
+		print();
 		std::string
 		speak();
 		std::string
@@ -40,6 +42,8 @@ class Cat : public Animal {
 class Dog : public Animal {
 
 	public:
+		void
+		print();
 		std::string
 		speak();
 		std::string
