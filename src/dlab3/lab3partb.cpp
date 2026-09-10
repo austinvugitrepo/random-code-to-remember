@@ -4,20 +4,20 @@ int
 main()
 {
 	int A, B;
-	int* ptrA, ptrB;
+	int* ptrA = &A;
+	int* ptrB = &B;
 
 	std::cout << "Enter Value of A: "; 
 	std::cin >> A;
-	std::cout << "Enter Value of B: "; 
+	std::cout << "\nEnter Value of B: "; 
 	std::cin >> B;
 
-	ptrA = A;
-	ptrB = B;
 
-	std::cout << "Value of ptrA is " << *ptrA
+	std::cout << "\nValue of ptrA is " << *ptrA
 		<< " stored in address " << ptrA;
-	std::cout << "Value of ptrB is " << *ptrB
+	std::cout << "\nValue of ptrB is " << *ptrB
 		<< " stored in address " << ptrB;
+	std::cout << "\n";
 
 	return 0;
 
