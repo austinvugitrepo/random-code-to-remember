@@ -19,7 +19,7 @@ Polygon :: area()
 int
 Triangle :: area()
 {
-	int area = w * h * 0.5;
+	int area = width * height * 0.5;
 	return area;
 
 }
@@ -27,7 +27,7 @@ Triangle :: area()
 int
 Rectangle :: area()
 {
-	int area = w * h
+	int area = width * height;
 	return area;
 
 }

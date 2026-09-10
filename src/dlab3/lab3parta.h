@@ -1,6 +1,6 @@
 class Polygon {
 
-	private:
+	protected:
 		int width, height;
 	public:
 		void

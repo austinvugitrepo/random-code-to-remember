@@ -1,4 +1,5 @@
 #include "lab3parta.h"
+#include <iostream>
 
 int display(Polygon* );
 
@@ -16,6 +17,7 @@ main()
 	std::cout << "Area as a Polygon object: " << display(&p);
 	std::cout << "\nArea as a Triangle object: " << display(&t);
 	std::cout << "\nArea as a Rectangle object: " << display(&r);
+	std::cout << "\n";
 
 	return 0;
 
@@ -24,6 +26,7 @@ main()
 int
 display(Polygon* shape)
 {
-	shape->area();
+	int s = shape->area();
+	return s;
 
 }
