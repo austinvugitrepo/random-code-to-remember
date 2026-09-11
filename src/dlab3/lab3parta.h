@@ -1,3 +1,6 @@
+#ifndef LAB3PARTA_H
+#define LAB3PARTA_H
+
 class Polygon {
 
 	protected:
@@ -25,3 +28,5 @@ class Rectangle : public Polygon {
 		area();
 
 };
+
+#endif

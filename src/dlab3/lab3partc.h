@@ -1,3 +1,8 @@
+#ifndef LAB3PARTC_H
+#define LAB3PARTC_H
+
+#include <iostream>
+
 class myArray
 {
 	private:
@@ -12,3 +17,5 @@ class myArray
 		void add(int val); // add a new value to the end
 		void remove(); // remove an item at the end
 }
+
+#endif
