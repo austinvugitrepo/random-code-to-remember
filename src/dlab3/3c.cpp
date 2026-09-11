@@ -10,10 +10,12 @@ myArray :: myArray(int size)
 
 myArray :: myArray(const myArray& other)
 {
+	maxSize = other.maxSize;
+	arr = new int[maxSize]; 
+	nextIndex = other.nextIndex;
 
-
-
-
+	for (int i = 0; i < nextIndex; i++)
+		arr[i] = other.arr[i];
 }
 
 myArray :: ~myArray()
@@ -24,10 +26,8 @@ myArray :: ~myArray()
 void
 myArray :: display()
 {
-	maxSize = nextIndex;
-
 	std::cout << "The list you entered is: ";
-	for (int i = 0; i < maxSize; i++)
+	for (int i = 0; i < nextIndex; i++)
 		std::cout << arr[i] << " ";
 
 	std::cout << "\n";
@@ -47,6 +47,20 @@ myArray :: add(int val)
 void
 myArray :: remove()
 {
+	nextIndex--;
 
+	if (nextIndex == 0) {
+ 
+	std::cout << "After removing, the list is: ";
+	std::cout << "Empty List!\n";
+	std::cout << "Cannot remove from an empty array.\n";
 
+	} else {
+	std::cout << "After removing, the list is: ";
+	for (int i = 0; i < nextIndex; i++)
+		std::cout << arr[i] << " ";
+
+	std::cout << "\n";
+
+	}
 }

@@ -20,6 +20,11 @@ main()
 	obj.add(val3);
 	obj.display();
 
+	myArray obj2(obj);
+	obj2.remove();
+	obj2.remove();
+	obj2.remove();
+
 	return 0;
 
 }
