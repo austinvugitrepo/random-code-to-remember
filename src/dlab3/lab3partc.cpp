@@ -1,4 +1,4 @@
-#include "labpartc.h"
+#include "lab3partc.h"
 
 int
 main()
@@ -14,6 +14,11 @@ main()
 	std::cin >> val1;
 	std::cin >> val2;
 	std::cin >> val3;
+
+	obj.add(val1);
+	obj.add(val2);
+	obj.add(val3);
+	obj.display();
 
 	return 0;
 

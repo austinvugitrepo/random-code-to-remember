@@ -18,14 +18,19 @@ myArray :: myArray(const myArray& other)
 
 myArray :: ~myArray()
 {
-
+	delete [] arr;
 }
 
 void
 myArray :: display()
 {
+	maxSize = nextIndex;
 
+	std::cout << "The list you entered is: ";
+	for (int i = 0; i < maxSize; i++)
+		std::cout << arr[i] << " ";
 
+	std::cout << "\n";
 }
 
 void
@@ -37,4 +42,11 @@ myArray :: add(int val)
 		arr[nextIndex] = val;
 		nextIndex++;
 	}
+}
+
+void
+myArray :: remove()
+{
+
+
 }
