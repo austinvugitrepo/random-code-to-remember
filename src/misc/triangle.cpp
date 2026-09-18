@@ -3,12 +3,9 @@
 class triangle {
 
 	private:
-
-		double base;
-		double height;
+		double base, height;
 
 	public:
-
 		triangle();
 		triangle(double, double);
 

@@ -1,67 +1,71 @@
 #include <iostream>
-using namespace std;
 #include "Date.h"
 
-int main() {
+int main()
+{
   
-  bool bo = true;
+	bool bo = true;
   
-  int m;
-  int d;
-  int y;
+	int m, d, y;
   
-  cout << "Enter the month (number) : \n ";
-  cin >> m;
-  cout << "Enter the day (number) :  \n";
-  cin >> d;
-  cout << " Enter the year (number): \n";
-  cin >> y;
+	std::cout << "Enter the month (number) : \n ";
+	std::cin >> m;
+	std::cout << "Enter the day (number) :  \n";
+	std::cin >> d;
+	std::cout << " Enter the year (number): \n";
+	std::cin >> y;
   
-  Date time(m, d, y);
+	Date time(m, d, y);
   
-  while(bo){
+	while (bo) {
+		std::cout << "The Date is: ";
+		time.printDate();
+		std::cout << "1. add days" << std::endl;
+		std::cout << "2. subtract days" << std::endl;
+		std::cout << "3. get day" << std::endl;
+		std::cout << "4. get month" << std::endl;
+		std::cout << "5. get year" << std::endl;
+		std::cout << "6. quit" << std::endl;
 
-    cout << "The Date is: ";
-    time.printDate();
-    cout << "1. add days" << endl;
-    cout << "2. subtract days" << endl;
-    cout << "3. get day" << endl;
-    cout << "4. get month" << endl;
-    cout << "5. get year" << endl;
-    cout << "6. quit" << endl;
-
-    int choice;
-    int choicew;
-    cout << "Enter your choice: ";
-    cin >> choice;
+    		int choice;
+    		int choicew;
+    		std::cout << "Enter your choice: ";
+    		std::cin >> choice;
     
-    switch(choice){
+    		switch(choice){
       
-      case 1:
-        cout << "\n\nHow many days do you want to add: ";
-        cin >> choicew;
-        time.addDays(choicew);
-        break;
+      		case 1:
+        	std::cout << "\n\nHow many days do you want to add: ";
+        	std::cin >> choicew;
+        	time.addDays(choicew);
+        	break;
       
-      case 2: 
-        cout <<"\n\nHow many days do you want to subtract: ";
-        cin >> choicew;
-        time.subtractDays(choicew);
-        break;
+      		case 2: 
+        	std::cout <<"\n\nHow many days do you want to subtract: ";
+        	std::cin >> choicew;
+        	time.subtractDays(choicew);
+        	break;
       
-      case 3:
-        cout << "\n\nThe day is: " << time.getDay() << endl;
-        break;
-      case 4:
-        cout << "\n\nThe month is: " << time.getMonth() << endl;
-        break;
-      case 5:
-        cout << "\n\nThe year is: " << time.getYear() << endl;
-        break;
-      case 6:
-        bo = false;
-        break;
-    }
+      		case 3:
+        	std::cout << "\n\nThe day is: " << time.getDay() << std::endl;
+        	break;
 
-  }
+      		case 4:
+        	std::cout << "\n\nThe month is: " << time.getMonth() << std::endl;
+        	break;
+
+      		case 5:
+        	std::cout << "\n\nThe year is: " << time.getYear() << std::endl;
+       		break;
+
+      		case 6:
+        	bo = false;
+        	break;
+
+    		}
+
+  	}
+
+	return 0;
+
 }
