@@ -3,38 +3,41 @@
 
 class Mass {
 
-private:
+	private:
+		double tonne, kilogram, gram;
 
-    double tonne;
-    double kilogram;
-    double gram;
+		void
+		normalize();
 
-    // Helper function to normalize the mass values
-    void normalize();
+	public:
+    		Mass();  
+    		Mass(double , double , double ); 
+    		Mass(const Mass&);  
+    		Mass
+		operator+(const Mass&) const;
+    		Mass
+		operator+(double) const;
+    		Mass
+		operator-(const Mass&) const;
+    		Mass&
+		operator=(const Mass&);
 
-public:
+    		bool
+		operator==(const Mass&) const;
+    		bool
+		operator!=(const Mass&) const;
+    		bool
+		operator<(const Mass&) const;
+    		bool
+		operator>(const Mass&) const;
 
-    Mass();  
-    Mass(double , double , double ); 
-    Mass(const Mass& other);  
+    		Mass&
+		operator+=(const Mass&);
+    		Mass&
+		operator+=(double);
 
-    Mass operator+(const Mass& other) const;
-    Mass operator+(double g) const;
-
-    Mass operator-(const Mass& other) const;
-
-    Mass& operator=(const Mass& other);
-
-    bool operator==(const Mass& other) const;
-    bool operator!=(const Mass& other) const;
-
-    bool operator<(const Mass& other) const;
-    bool operator>(const Mass& other) const;
-
-    Mass& operator+=(const Mass& other);
-    Mass& operator+=(double g);
-
-    void display() const;
+    		void
+		display() const;
 };
 
 #endif

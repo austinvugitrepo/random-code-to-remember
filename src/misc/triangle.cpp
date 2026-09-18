@@ -64,7 +64,8 @@ triangle::getarea()
 	return base * height * 0.5;
 }
 
-int main()
+int
+main()
 { 
 	int amount = 0;
   

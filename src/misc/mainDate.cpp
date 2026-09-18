@@ -1,7 +1,8 @@
 #include <iostream>
 #include "Date.h"
 
-int main()
+int
+main()
 {
   
 	bool bo = true;
